@@ -11,11 +11,11 @@ func intToRoman(num int) string {
 	var index = len(romans) - 1
 
 	for num > 0 {
-		for numbers[index] <= num { // looping 
+		for numbers[index] <= num { // looping numbers from 1000 going downwords(right to left)
 			roman += romans[index]
 			num -= numbers[index]
 		}
-		index -= 1
+		index -= 1 // reducing the index by 1 since we are looping from left to right
 	}
 
 	return roman
